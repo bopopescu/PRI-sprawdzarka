@@ -28,3 +28,9 @@ def task_sended_upload(request):
         form=SendedTasksForm()
     return render(request,'task_sended_upload.html', {'form': form})
 
+def read_file(request,x):
+    f = open('x', 'r')
+    file_content = f.read()
+    f.close()
+    return HttpResponse(file_content, content_type="text/plain")
+
