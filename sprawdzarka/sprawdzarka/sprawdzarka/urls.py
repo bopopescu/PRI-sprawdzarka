@@ -28,5 +28,8 @@ urlpatterns = [
     path('', views.index),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('task/upload/',views.task_sended_upload),
+    path('task/sendedList/',views.task_sended_list),
+    path('task/SendedTasks/<str:file_to_open>',views.read_file)
 ]
 
